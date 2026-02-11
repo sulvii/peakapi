@@ -1,0 +1,326 @@
+{
+  "component": "files\/mirror\/video",
+  "props": {
+    "errors": {},
+    "streams": {
+      "status": "success",
+      "msg": "OK",
+      "token": "c643ad20c42cf1aa8ee853699bf37f09",
+      "data": [
+        {
+          "hashId": "VIxFbgxOfNtJW",
+          "label": "1080p (source)",
+          "resolution": "1920x1080",
+          "size": 424712714,
+          "mirrors": [
+            {
+              "driver": "lulustream",
+              "link": "\/\/lulustream.com\/e\/eg2p2p91l6u0",
+              "uploaded_at": "2026-01-12 20:54:16",
+              "checked_at": "2026-02-10 18:45:52"
+            },
+            {
+              "driver": "krakenfiles",
+              "link": "\/\/krakenfiles.com\/embed-video\/rublAGzbGH",
+              "uploaded_at": "2026-01-12 20:54:18",
+              "checked_at": "2026-02-10 18:45:53"
+            },
+            {
+              "driver": "voe",
+              "link": "\/\/voe.sx\/e\/7a8gnciwa5s2",
+              "uploaded_at": "2026-01-12 20:54:35",
+              "checked_at": "2026-02-10 18:45:53"
+            },
+            {
+              "driver": "doodstream",
+              "link": "\/\/doodstream.com\/e\/83tewcp6e02z",
+              "uploaded_at": "2026-01-12 20:55:42",
+              "checked_at": "2026-02-10 18:45:53"
+            },
+            {
+              "driver": "mixdrop",
+              "link": "\/\/mixdrop.ag\/e\/gjkzq73pt9mlk",
+              "uploaded_at": "2026-01-12 20:55:06",
+              "checked_at": "2026-02-10 18:45:54"
+            },
+            {
+              "driver": "mp4upload",
+              "link": "\/\/mp4upload.com\/embed-59jqmtw1qgk9.html",
+              "uploaded_at": "2026-01-12 20:55:06",
+              "checked_at": "2026-02-10 18:45:55"
+            },
+            {
+              "driver": "veev",
+              "link": "\/\/veev.to\/e\/zqkdzxiky84d",
+              "uploaded_at": "2026-01-12 20:56:46",
+              "checked_at": "2026-02-10 18:45:57"
+            },
+            {
+              "driver": "thetube",
+              "link": "\/\/www.they.tube\/e\/lvuw8dv1kzhk",
+              "uploaded_at": "2026-01-12 20:57:04",
+              "checked_at": "2026-02-10 18:45:58"
+            },
+            {
+              "driver": "rpmshare",
+              "link": "\/\/rpmplay.me\/#3gecuh",
+              "uploaded_at": "2026-01-12 20:57:33",
+              "checked_at": "2026-02-10 18:45:58"
+            },
+            {
+              "driver": "uqload",
+              "link": "\/\/uqload.cx\/embed-pe22ws7nmmk5.html",
+              "uploaded_at": "2026-01-12 20:56:51",
+              "checked_at": "2026-02-10 18:45:58"
+            },
+            {
+              "driver": "streamhg",
+              "link": "\/\/streamwish.to\/e\/booqhrmc7pyu",
+              "uploaded_at": "2026-01-27 17:35:37",
+              "checked_at": "2026-02-10 18:46:19"
+            },
+            {
+              "driver": "earnvids",
+              "link": "\/\/vidhidevip.com\/v\/axa8j6yhhiwm",
+              "uploaded_at": "2026-02-10 18:47:01",
+              "checked_at": null
+            }
+          ]
+        },
+        {
+          "hashId": "atVeHsdl4Xeeb",
+          "label": "720p",
+          "resolution": "1280x720",
+          "size": 256189639,
+          "mirrors": [
+            {
+              "driver": "lulustream",
+              "link": "\/\/lulustream.com\/e\/kafr1ppd63c8",
+              "uploaded_at": "2026-01-12 21:09:55",
+              "checked_at": "2026-02-10 18:46:11"
+            },
+            {
+              "driver": "krakenfiles",
+              "link": "\/\/krakenfiles.com\/embed-video\/eI8yybOqRJ",
+              "uploaded_at": "2026-01-12 21:10:05",
+              "checked_at": "2026-02-10 18:46:12"
+            },
+            {
+              "driver": "voe",
+              "link": "\/\/voe.sx\/e\/1pio50wacnhc",
+              "uploaded_at": "2026-01-12 21:10:13",
+              "checked_at": "2026-02-10 18:46:12"
+            },
+            {
+              "driver": "doodstream",
+              "link": "\/\/doodstream.com\/e\/6cbt3giwg5hv",
+              "uploaded_at": "2026-01-12 21:10:48",
+              "checked_at": "2026-02-10 18:46:13"
+            },
+            {
+              "driver": "mixdrop",
+              "link": "\/\/mixdrop.ag\/e\/1n41lrvpbkknnkp",
+              "uploaded_at": "2026-01-12 21:10:26",
+              "checked_at": "2026-02-10 18:46:13"
+            },
+            {
+              "driver": "mp4upload",
+              "link": "\/\/mp4upload.com\/embed-o3d2ns3imcck.html",
+              "uploaded_at": "2026-01-12 21:11:03",
+              "checked_at": "2026-02-10 18:46:14"
+            },
+            {
+              "driver": "veev",
+              "link": "\/\/veev.to\/e\/d67qj7yg34pw",
+              "uploaded_at": "2026-01-12 21:12:29",
+              "checked_at": "2026-02-10 18:46:16"
+            },
+            {
+              "driver": "thetube",
+              "link": "\/\/www.they.tube\/e\/dmupdrl2x1u2",
+              "uploaded_at": "2026-01-12 21:12:26",
+              "checked_at": "2026-02-10 18:46:17"
+            },
+            {
+              "driver": "rpmshare",
+              "link": "\/\/rpmplay.me\/#tl158g",
+              "uploaded_at": "2026-01-12 21:13:05",
+              "checked_at": "2026-02-10 18:46:17"
+            },
+            {
+              "driver": "uqload",
+              "link": "\/\/uqload.cx\/embed-xfucmhodiz5q.html",
+              "uploaded_at": "2026-01-12 21:13:15",
+              "checked_at": "2026-02-10 18:46:17"
+            },
+            {
+              "driver": "streamhg",
+              "link": "\/\/streamwish.to\/e\/x9vaz89xlnil",
+              "uploaded_at": "2026-01-27 17:37:59",
+              "checked_at": "2026-02-10 18:46:18"
+            }
+          ]
+        },
+        {
+          "hashId": "QMiPtw7YR8cjV",
+          "label": "480p",
+          "resolution": "854x480",
+          "size": 123061761,
+          "mirrors": [
+            {
+              "driver": "lulustream",
+              "link": "\/\/lulustream.com\/e\/v16bvz1lt6aq",
+              "uploaded_at": "2026-01-12 21:05:01",
+              "checked_at": "2026-02-10 18:46:05"
+            },
+            {
+              "driver": "krakenfiles",
+              "link": "\/\/krakenfiles.com\/embed-video\/9j1kElSoNt",
+              "uploaded_at": "2026-01-12 21:05:09",
+              "checked_at": "2026-02-10 18:46:06"
+            },
+            {
+              "driver": "voe",
+              "link": "\/\/voe.sx\/e\/aibdo1rik3ii",
+              "uploaded_at": "2026-01-12 21:05:09",
+              "checked_at": "2026-02-10 18:46:06"
+            },
+            {
+              "driver": "doodstream",
+              "link": "\/\/doodstream.com\/e\/prpxghqveub2",
+              "uploaded_at": "2026-01-12 21:06:01",
+              "checked_at": "2026-02-10 18:46:06"
+            },
+            {
+              "driver": "mixdrop",
+              "link": "\/\/mixdrop.ag\/e\/1n41lzejakmk7",
+              "uploaded_at": "2026-01-12 21:05:49",
+              "checked_at": "2026-02-10 18:46:06"
+            },
+            {
+              "driver": "mp4upload",
+              "link": "\/\/mp4upload.com\/embed-x125yjpmutxl.html",
+              "uploaded_at": "2026-01-12 21:06:02",
+              "checked_at": "2026-02-10 18:46:07"
+            },
+            {
+              "driver": "veev",
+              "link": "\/\/veev.to\/e\/hfxopji07l4c",
+              "uploaded_at": "2026-01-12 21:08:49",
+              "checked_at": "2026-02-10 18:46:09"
+            },
+            {
+              "driver": "thetube",
+              "link": "\/\/www.they.tube\/e\/s3663fc23xir",
+              "uploaded_at": "2026-01-12 21:08:54",
+              "checked_at": "2026-02-10 18:46:10"
+            },
+            {
+              "driver": "rpmshare",
+              "link": "\/\/rpmplay.me\/#fdlki6",
+              "uploaded_at": "2026-01-12 21:09:01",
+              "checked_at": "2026-02-10 18:46:10"
+            },
+            {
+              "driver": "uqload",
+              "link": "\/\/uqload.cx\/embed-aezktgnjoq7g.html",
+              "uploaded_at": "2026-01-12 21:09:08",
+              "checked_at": "2026-02-10 18:46:11"
+            },
+            {
+              "driver": "streamhg",
+              "link": "\/\/streamwish.to\/e\/3paeg2020mt9",
+              "uploaded_at": "2026-01-27 17:37:03",
+              "checked_at": "2026-02-10 18:46:18"
+            }
+          ]
+        },
+        {
+          "hashId": "3iM6JtBoIk8UV",
+          "label": "360p",
+          "resolution": "640x360",
+          "size": 76654704,
+          "mirrors": [
+            {
+              "driver": "darkibox",
+              "link": "\/\/darkibox.com\/embed-hn2qkl27kiot.html",
+              "uploaded_at": "2026-01-12 21:02:58",
+              "checked_at": "2026-01-27 17:34:18",
+              "adblock": true
+            },
+            {
+              "driver": "lulustream",
+              "link": "\/\/lulustream.com\/e\/m0cvh5lhvpu4",
+              "uploaded_at": "2026-01-12 21:02:56",
+              "checked_at": "2026-02-10 18:45:59"
+            },
+            {
+              "driver": "krakenfiles",
+              "link": "\/\/krakenfiles.com\/embed-video\/FE62ybfREh",
+              "uploaded_at": "2026-01-12 21:02:58",
+              "checked_at": "2026-02-10 18:46:00"
+            },
+            {
+              "driver": "voe",
+              "link": "\/\/voe.sx\/e\/jsfiujenukwg",
+              "uploaded_at": "2026-01-12 21:03:10",
+              "checked_at": "2026-02-10 18:46:00"
+            },
+            {
+              "driver": "doodstream",
+              "link": "\/\/doodstream.com\/e\/bqeeqc8evcdn",
+              "uploaded_at": "2026-01-12 21:03:43",
+              "checked_at": "2026-02-10 18:46:00"
+            },
+            {
+              "driver": "mixdrop",
+              "link": "\/\/mixdrop.ag\/e\/xwqed37gslo9pej",
+              "uploaded_at": "2026-01-12 21:03:14",
+              "checked_at": "2026-02-10 18:46:00"
+            },
+            {
+              "driver": "mp4upload",
+              "link": "\/\/mp4upload.com\/embed-0c9lxocdou0y.html",
+              "uploaded_at": "2026-01-12 21:04:02",
+              "checked_at": "2026-02-10 18:46:01"
+            },
+            {
+              "driver": "veev",
+              "link": "\/\/veev.to\/e\/5kwxaapn6ucf",
+              "uploaded_at": "2026-01-12 21:04:47",
+              "checked_at": "2026-02-10 18:46:03"
+            },
+            {
+              "driver": "thetube",
+              "link": "\/\/www.they.tube\/e\/kbaf9o0ysc8a",
+              "uploaded_at": "2026-01-12 21:04:49",
+              "checked_at": "2026-02-10 18:46:04"
+            },
+            {
+              "driver": "rpmshare",
+              "link": "\/\/rpmplay.me\/#96xduf",
+              "uploaded_at": "2026-01-12 21:04:46",
+              "checked_at": "2026-02-10 18:46:04"
+            },
+            {
+              "driver": "uqload",
+              "link": "\/\/uqload.cx\/embed-ec1ciwtqx7x5.html",
+              "uploaded_at": "2026-01-12 21:05:04",
+              "checked_at": "2026-02-10 18:46:04"
+            },
+            {
+              "driver": "streamhg",
+              "link": "\/\/streamwish.to\/e\/ohe64fng6rhv",
+              "uploaded_at": "2026-01-27 17:36:18",
+              "checked_at": "2026-02-10 18:46:18"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "url": "\/iframe\/R6uO9BzaLoVkj",
+  "version": "d98bcc9c79d1c5ff36a86cc41dfcd275",
+  "clearHistory": false,
+  "encryptHistory": false
+}
