@@ -1,4 +1,3 @@
-import { fetch } from 'bun';
 import { hentaiIMeanFixTheUrl } from "./hentai";
 import Elysia from 'elysia';
 import cors from '@elysiajs/cors';
