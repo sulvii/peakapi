@@ -3,7 +3,7 @@ import Elysia from 'elysia';
 import cors from '@elysiajs/cors';
 import * as v from 'valibot';
 
-export const hentai = async (iframeId: string) => {
+const hentai = async (iframeId: string) => {
     const baseurl = 'https://megamax.me/iframe';
     const url = `${baseurl}/${iframeId}`;
 
@@ -61,7 +61,7 @@ export const hentai = async (iframeId: string) => {
     return iframeUrls
 } 
 
-new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
+export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
     const { iframe_id } = query;
     const urls = await hentai(iframe_id);
 
