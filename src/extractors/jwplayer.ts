@@ -11,7 +11,13 @@ export function extractJwPlayerSources(html: string): string[] {
       '$1"$2":'
     );
     
-    return JSON.parse(sourcesStr ?? `{ "message": "this shit tough" }`);
+    const sources = JSON.parse(sourcesStr ?? `{ "message": "this shit tough" }`);
+    if ('message' in sources) {
+        return []
+    }
+    const shit = sources as { file: string }[]
+
+    return shit.map((shii) => shii.file);
   } catch (e) {
     return [];
   }

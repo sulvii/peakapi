@@ -101,7 +101,7 @@ export const extractLulustream = async (url: string) => {
 
     return {
         sources: sources.filter(Boolean),
-        isM3U8: sources.some((source) => source.includes('.m3u8')),
+        isM3U8: sources.some((source) => source?.includes('.m3u8')),
         headers: {
             Referer: url
         }
