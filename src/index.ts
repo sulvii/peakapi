@@ -5,6 +5,8 @@ import * as v from 'valibot';
 import { VoeExtractor } from "./extractors/voe";
 import { extractJwPlayerSources } from "./extractors/jwplayer";
 import { getDrakenIMeanKraken } from "./extractors/krakenfiles";
+import { ScriptExtractor } from "./extractors/packedscript";
+import { unpackObfuscatedCode } from "./frotofrotofrotoPEAK";
 
 const hentai = async (iframeId: string) => {
     const baseurl = 'https://megamax.me/iframe';
@@ -124,6 +126,33 @@ export const extractDrakenFromTokyoRevengers = async (url: string) => {
     }
 }
 
+export const extractTheTubeFr = async (url: string) => {
+        const res = await fetch(url);
+    const data = await res.text();
+    const fih = new ScriptExtractor();
+
+    
+    const dih = new HTMLRewriter();
+    dih.on('script', fih);
+    dih.transform(data);
+
+    const hopefullyThePackedScript = fih.scriptContent.scripts[0];
+    if (!hopefullyThePackedScript) {
+        return {
+            sources: []
+        }
+    }
+    const sixseven = unpackObfuscatedCode(hopefullyThePackedScript);
+    const sources = extractJwPlayerSources(sixseven);
+
+    return {
+        sources: sources.filter(Boolean),
+        isM3U8: sources.some((source) => source?.includes('.m3u8')),
+        headers: {
+            Referer: url
+        }
+    }
+}
 
 export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
     const { iframe_id } = query;
@@ -157,6 +186,13 @@ export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) =>
         }
     } else if (server === 'krakenfiles') {
         const sources = await extractDrakenFromTokyoRevengers(decodeURIComponent(iframeUrl));
+
+         return {
+            message: 'Successfully extracted hentai sources- i mean anime sources frfr',
+            data: sources
+        }
+    } else if (server === 'thetube') {
+        const sources = await extractTheTubeFr(decodeURIComponent(iframeUrl));
 
          return {
             message: 'Successfully extracted hentai sources- i mean anime sources frfr',
