@@ -109,7 +109,7 @@ export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) =>
     const { server, iframeUrl } = query;
 
     if (server === 'voe') {
-        const sources = await extractVoe(iframeUrl);
+        const sources = await extractVoe(decodeURIComponent(iframeUrl));
 
         return {
             message: 'Successfully extracted hentai sources- i mean anime sources frfr',
