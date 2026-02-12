@@ -4,6 +4,7 @@ import cors from '@elysiajs/cors';
 import * as v from 'valibot';
 import { VoeExtractor } from "./extractors/voe";
 import { extractJwPlayerSources } from "./extractors/jwplayer";
+import { getDrakenIMeanKraken } from "./extractors/krakenfiles";
 
 const hentai = async (iframeId: string) => {
     const baseurl = 'https://megamax.me/iframe';
@@ -108,6 +109,22 @@ export const extractLulustream = async (url: string) => {
     }
 }
 
+export const extractDrakenFromTokyoRevengers = async (url: string) => {
+    const res = await fetch(url);
+    const data = await res.text();
+
+    const sources = getDrakenIMeanKraken(data);
+
+    return {
+        sources: sources.filter(Boolean),
+        isM3U8: sources.some((source) => source?.includes('.m3u8')),
+        headers: {
+            Referer: url
+        }
+    }
+}
+
+
 export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
     const { iframe_id } = query;
     const urls = await hentai(iframe_id);
@@ -133,6 +150,13 @@ export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) =>
         }
     } else if (server === 'lulustream') {
         const sources = await extractLulustream(decodeURIComponent(iframeUrl));
+
+         return {
+            message: 'Successfully extracted hentai sources- i mean anime sources frfr',
+            data: sources
+        }
+    } else if (server === 'krakenfiles') {
+        const sources = await extractDrakenFromTokyoRevengers(decodeURIComponent(iframeUrl));
 
          return {
             message: 'Successfully extracted hentai sources- i mean anime sources frfr',
