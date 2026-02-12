@@ -2,6 +2,7 @@ import { hentaiIMeanFixTheUrl } from "./hentai";
 import Elysia from 'elysia';
 import cors from '@elysiajs/cors';
 import * as v from 'valibot';
+import { VoeExtractor } from "./extractors/voe";
 
 const hentai = async (iframeId: string) => {
     const baseurl = 'https://megamax.me/iframe';
@@ -61,6 +62,36 @@ const hentai = async (iframeId: string) => {
     return iframeUrls
 } 
 
+export const extractVoe = async (url: string) => {
+    const embedResponse = await fetch(url);
+    const embedData = await embedResponse.text();
+
+    let sources: string | null = null;
+
+    const regex =  /window\.location\.href\s*=\s*(['"])(.*?)\1/g;
+          let match;
+      const results: string[] = [];
+
+      while ((match = regex.exec(embedData)) !== null) {
+        if (!match[2]) throw new Error('Error fetching Voex.');
+        results.push(match[2]);
+      }
+
+      const voexUrl = results[0];
+      if (!voexUrl) throw new Error('Could not find voex url.');
+      const voexResponse = await fetch(voexUrl)
+      const voexData = await voexResponse.text();
+      sources = VoeExtractor.getSources(voexData);
+
+      return {
+        sources,
+        isM3U8: sources?.includes('.m3u8'),
+        headers: {
+            Referer: 'no shitty refer available'
+        }
+      }
+}
+
 export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
     const { iframe_id } = query;
     const urls = await hentai(iframe_id);
@@ -73,4 +104,22 @@ export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) =>
     query: v.object({
         iframe_id: v.string('Iframe Id is required and it must be a base64 encoded string')
     })
-}).listen(3000);
+})
+.get('/extract-frame', async ({ query }) => {
+    const { server, iframeUrl } = query;
+
+    if (server === 'voe') {
+        const sources = await extractVoe(iframeUrl);
+
+        return {
+            message: 'Successfully extracted hentai sources- i mean anime sources frfr',
+            data: sources
+        }
+    }
+}, {
+    query: v.object({
+        server: v.string(),
+        iframeUrl: v.string()
+    })
+})
+.listen(3000);
