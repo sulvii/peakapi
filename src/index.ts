@@ -3,6 +3,7 @@ import Elysia from 'elysia';
 import cors from '@elysiajs/cors';
 import * as v from 'valibot';
 import { VoeExtractor } from "./extractors/voe";
+import { extractJwPlayerSources } from "./extractors/jwplayer";
 
 const hentai = async (iframeId: string) => {
     const baseurl = 'https://megamax.me/iframe';
@@ -84,12 +85,27 @@ export const extractVoe = async (url: string) => {
       sources = VoeExtractor.getSources(voexData);
 
       return {
-        sources,
+        sources: [sources].filter(Boolean),
         isM3U8: sources?.includes('.m3u8'),
         headers: {
-            Referer: 'no shitty refer available'
+            Referer: url
         }
       }
+}
+
+export const extractLulustream = async (url: string) => {
+    const res = await fetch(url);
+    const data = await res.text();
+
+    const sources = extractJwPlayerSources(data);
+
+    return {
+        sources: sources.filter(Boolean),
+        isM3U8: sources.some((source) => source.includes('.m3u8')),
+        headers: {
+            Referer: url
+        }
+    }
 }
 
 export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
@@ -112,6 +128,13 @@ export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) =>
         const sources = await extractVoe(decodeURIComponent(iframeUrl));
 
         return {
+            message: 'Successfully extracted hentai sources- i mean anime sources frfr',
+            data: sources
+        }
+    } else if (server === 'lulustream') {
+        const sources = await extractLulustream(decodeURIComponent(iframeUrl));
+
+         return {
             message: 'Successfully extracted hentai sources- i mean anime sources frfr',
             data: sources
         }
