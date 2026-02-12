@@ -127,31 +127,55 @@ export const extractDrakenFromTokyoRevengers = async (url: string) => {
 }
 
 export const extractTheTubeFr = async (url: string) => {
-        const res = await fetch(url);
-    const data = await res.text();
-    const fih = new ScriptExtractor();
-
+    const shitObj = new URL(url);
+    let shii = shitObj.pathname;
+    shii = shii.replace('.html', '');
+    const dihh = shii.split("/").pop()?.split("-").pop();
     
-    const dih = new HTMLRewriter();
-    dih.on('script', fih);
-    dih.transform(data);
-
-    const hopefullyThePackedScript = fih.scriptContent.scripts[0];
-    if (!hopefullyThePackedScript) {
-        return {
-            sources: []
+    if (!dihh) {
+        return { sources: [] };
+    }
+    
+    const formTypaShit = new URLSearchParams();
+    formTypaShit.append('op', 'embed');
+    formTypaShit.append('file_code', dihh);
+    formTypaShit.append('auto', '1');
+    formTypaShit.append('referer', '');
+    
+    const bigDihh = new URL(url).origin;
+    const redirectRes = await fetch(`${bigDihh}/dl`, {
+        method: 'POST',
+        body: formTypaShit
+    });
+    
+    const fihh = await redirectRes.text();
+    
+    const tsAintTuff = /<script[^>]*>([\s\S]*?)<\/script>/gi;
+    const ninja: string[] = [];
+    
+    let match;
+    while ((match = tsAintTuff.exec(fihh)) !== null) {
+        if (match[1]?.includes("eval")) {
+            ninja.push(match[1]);
         }
     }
-    const sixseven = unpackObfuscatedCode(hopefullyThePackedScript);
-    const sources = extractJwPlayerSources(sixseven);
-
+    
+    const frfr = ninja[0];
+    
+    if (!frfr) {
+        return { sources: [] };
+    }
+    
+    const sexsevem = unpackObfuscatedCode(frfr);
+    const sources = extractJwPlayerSources(sexsevem);
+    
     return {
         sources: sources.filter(Boolean),
         isM3U8: sources.some((source) => source?.includes('.m3u8')),
         headers: {
             Referer: url
         }
-    }
+    };
 }
 
 export default new Elysia().use(cors()).get('/iframe-urls', async ({ query }) => {
